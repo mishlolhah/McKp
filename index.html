@@ -3,6 +3,13 @@
     <head>
         <title>Our Funky HTML Page</title>
         <style>body {background-color: pink;}</style>
+		
+		<script>
+			function myfunction(p1, p2){
+			document.getElementById("demo").innerHTML = (p1 * p2);
+			}
+		</script>
+		
     </head>
     <body>
         <h1><center>MyNameJeff.com</center></h1>
@@ -15,7 +22,8 @@
         <br>Mosquito waited for Jeff on the bridge, who promised to be on his way to his position.
         <br>When Mosquito went into his presumed direction Jeff shouted he's getting shot at.
         <br>The next thing Mosquito heard was a male voice claiming he just killed Jeff.[1] Mosquito acted as he would team up with the murderer,
-        <br>only to stab him to death in the moment he lowered his guard.[2] Mosquito died himself later, but at least he was able to avenge Jeff's death.
+        <br>only to stab him to death in the moment he lowered his guard.[2] Mosquito died himself later,
+		<br>but at least he was able to avenge Jeff's death.
 
     </p>
         <form>
@@ -24,9 +32,15 @@
             <br><input placeholder="last name">
             <br><input placeholder="user name">
             <br><input placeholder="password">
-           
         </form>
-        <center></center>
-    <center><button>clickMe</button><button>Then Me</button></center>
+        <center>
+			<br><input type="number" name="a" id="a"></input>
+			<br><input type="number" name="b" id="b"></input>
+		</center>
+    <center>
+		<button onclick = myfunction(document.getElementById('a').value,document.getElementById('b').value)>calculate</button>
+		<button>clear</button>
+	</center>
+	<p id="demo"></p>
     </body>
 </html>

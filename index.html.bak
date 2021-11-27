@@ -3,6 +3,13 @@
     <head>
         <title>Our Funky HTML Page</title>
         <style>body {background-color: pink;}</style>
+		
+		<script>
+			function myfunction(p1, p2){
+			document.getElementById("demo").innerHTML = (p1 * p2);
+			}
+		</script>
+		
     </head>
     <body>
         <h1><center>MyNameJeff.com</center></h1>
@@ -23,10 +30,16 @@
             <br><input placeholder="first name">
             <br><input placeholder="last name">
             <br><input placeholder="user name">
-            <br><input placeholder="password name">
-           
+            <br><input placeholder="password">
         </form>
-        <center></center>
-    <center><button>clickMe</button><button>Then Me</button></center>
+        <center>
+			<br><input type="number" name="a" id="a"></input>
+			<br><input type="number" name="b" id="b"></input>
+		</center>
+    <center>
+		<button onclick = myfunction(document.getElementById('a').value,document.getElementById('b').value)>calculate</button>
+		<button>clear</button>
+	</center>
+	<p id="demo"></p>
     </body>
 </html>
