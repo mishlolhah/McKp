@@ -6,7 +6,7 @@
 		
 		<script>
 			function myfunction(p1, p2){
-			document.getElementById("demo").innerHTML = (p1 * p2);
+			document.getElementById("demo").innerHTML = "result:" + (p1 * p2);
 			}
 		</script>
 		
@@ -38,9 +38,9 @@
 			<br><input type="number" name="b" id="b"></input>
 		</center>
     <center>
-		<button onclick = myfunction(document.getElementById('a').value,document.getElementById('b').value)>calculate</button>
-		<button>clear</button>
+		<button onclick = "myfunction(document.getElementById('a').value, document.getElementById('b').value)">calculate</button>
+		<button onclick = "document.getElementById('a').value = '', document.getElementById('b').value = '', document.getElementById('demo').innerHTML = 'result:'">clear</button>
 	</center>
-	<p id="demo"></p>
+	<center><p id="demo">result:</p></center>
     </body>
 </html>
